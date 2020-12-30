@@ -5,6 +5,12 @@
 <link rel="stylesheet" href="{% static '/css/comments.css' %}">
 {% endblock %}
  {% block content %}
+           <table class="table">
+  <tr class="tab">
+       <th><a href="{% url 'place' %}">Info</a></th>
+    <th><a href="#">How to go</a></th>
+    <th><a href="{% url 'comment' %}">Comments</a></th>
+  </tr>
 <div class="comtab"><p style="float: left;">Name : fatih</p><p style="float: right;">Rate :10/10</p><br><br><p><hr>
 <p class="comm">Evliya Çelebi kuleyi şöyle tarif eder: Deniz içinde karadan bir ok atımı uzak, dört köşe, sanatkarane yapılmış bir yüksek kuledir. Yüksekliği tam 80 (seksen) arşındır. Sathı mesehası iki yüz adımdır. İki taraftan kapısı vardır.
 </p></div>
