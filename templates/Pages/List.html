@@ -1,0 +1,14 @@
+
+{% extends 'Pages/main.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static '/css/list.css' %}">
+{% endblock %}
+{% block content %}
+      <a id="baslık" href="{% url 'place' %}">Ali mehmet cami</a>
+      <h2 id="rate">Rate: 4/10</h2>
+
+<img src="{% static 'img/lehamam.png' %}" alt="aaa" class="img">
+<button type="button" class="button" id="comm">Make comment</button>
+<button type="button" class="button" id="del">Delete</button>
+{% endblock %}

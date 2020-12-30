@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+<link rel="stylesheet" href="{% static '/css/signin.css' %}">
+    <title></title>
+  </head>
+  <body>
+    <form action="" style="border:1px solid #ccc">
+  <div class="container">
+    <h1>Sign In</h1>
+    <label for="email"><b>Email</b></label>
+    <br>
+    <input type="text" placeholder="Enter Email" name="email" required>
+    <br>
+    <label for="psw"><b>Password</b></label>
+    <br>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+    <br>
+    <label>
+      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+    </label>
+    <div class="clearfix">
+      <button type="submit" class="signupbtn">Sign In</button>
+    </div>
+  </div>
+</form>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+      {% block css %}
+      {% endblock %}
+  </head>
+  <body>
+<!-- sidenav -->
+<ul class="sideu">
+    <div class="sidenav">
+      <li class="si"><a href="{% url 'city' %}">İstanbul</a></li>
+      <li class="si"><a href="#">Ankara</a></li>
+      <li class="si"><a href="#">İzmir</a></li>
+      <li class="si"><a href="#">Bursa</a></li>
+    </div>
+  </ul>
+<!-- horizantal -->
+    <div class="horizantal">
+      <ul class="horu">
+        <li class="hor" style="float:left"><a class="active" href="{% url 'home' %}">Home</a></li>
+        <li class="hor" style="float:right"><a href="{% url 'si' %}">Login</a></li>
+        <li class="hor" style="float:right"><a href="{% url 'su' %}">Sign up</a></li>
+
+</ul>
+</div>
+    <div class="main">
+        {% block content %}
+
+        {% endblock %}
+
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+{% extends 'Pages/main.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static '/css/city.css' %}">
+{% endblock %}
+{% block content %}
+      <a href="{% url 'place' %}" id="baslık">Ali Mehmet AĞA camisi</a>
+      <h2 id="rate">Rate: 4/10</h2>
+      <p class="pl">Leonardo, genç bir noter olan Messer/Ser (Üstad anlamında) Piero da Vinci'nin ve Vinci bölgesinden Caterina Lippi adlı, on altı yaşında, öksüz, yetim ve yoksul bir genç kız olduğu anlaşılan Caterina'nın evlilik dışı çocuğu olarak Vinci kasabası yakınlarındaki Anchiano'da dünyaya geldi.
+</p>
+<img src="{% static 'img/lehamam.png' %}" alt="aaa" class="fimg">
+<img src="{% static 'img/hamam.jpg' %}" alt="pls fix this" class="simg">
+
+{% endblock %}
