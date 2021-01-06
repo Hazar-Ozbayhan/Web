@@ -12,6 +12,7 @@ class Place(models.Model):
     info = models.CharField
     kind = models.CharField(max_length=30)
     rate = models.IntegerField
+    Images = models.ImageField
 
 class User(models.Model):
     name = models.CharField
