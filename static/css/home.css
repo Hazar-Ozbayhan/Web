@@ -4,7 +4,7 @@
   top: 120px;
   left: 150px;
   position: absolute;
-  color: red;
+  color: magenta;
   background: none;
 }
 .info{
@@ -12,6 +12,7 @@
   top: 200px;
   left: 150px;
   position: absolute;
+  color: black;
 }
 html{
 }

@@ -72,3 +72,40 @@ table, th, td {
   color: red;
   text-decoration: none;
 }
+.like{
+  top: 200px;
+  left: 1000px;
+  position: absolute;
+  background: transparent;
+  border: none;
+  color: transparent;
+  outline: none;
+}
+.hile{
+  top: 195px;
+  left: 1005px;
+  position: absolute;
+
+}
+.ll{
+  height: 5%;
+  width: 5%;
+}
+
+.hil2{
+  top: 195px;
+  left: 1060px;
+  position: absolute;
+}
+.dis{
+  top: 200px;
+  left: 1055px;
+  position: absolute;
+  background: transparent;
+  border: none;
+  color: transparent;
+}
+.dl{
+  height: 5%;
+  width: 5%;
+}
