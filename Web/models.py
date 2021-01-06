@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class City(models.Model):
+"""class City(models.Model):
     name = models.CharField
 
 class Place(models.Model):
@@ -35,4 +35,4 @@ class howToGo(models.Model):
 
 class List(models.Model):
     user = models.ForeignKey(User)
-    place = models.ForeignKey(Place)
+    place = models.ForeignKey(Place)"""

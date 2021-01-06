@@ -5,7 +5,7 @@
   z-index: 1;
   top: 80px;
   left: 10px;
-  background: gray;
+  background: #333;
   overflow-x: hidden;
   padding: 2px 0px;
   border: 1px solid black;
@@ -23,14 +23,14 @@
   margin: 0;
   padding: 0;
   width: 92px;
-  background-color: #a3c2c2;
+  background-color: #333;
   position: fixed;
   height: 100%;
   overflow: auto;
   top:46px;
 }
 .si a{
-  color: black;
+  color: white;
   text-decoration: none;
 }
 .si:last-child{
@@ -63,5 +63,5 @@
   background-color: #333;
 }
 body{
-  background: #d9d9d9;
+  background: url("/static/img/back.png");
 }
