@@ -58,6 +58,7 @@ table, th, td {
 .comm {
   overflow-y: scroll;
   height: 50px;
+  color: white;
 }
 .table{
   position: absolute;
@@ -104,8 +105,16 @@ table, th, td {
   background: transparent;
   border: none;
   color: transparent;
+  outline: none;
 }
 .dl{
   height: 5%;
   width: 5%;
+}
+body{
+  background:url("/static/img/comm.png") ;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }

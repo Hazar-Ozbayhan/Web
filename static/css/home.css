@@ -16,3 +16,6 @@
 }
 html{
 }
+body{
+  background: url("/static/img/back.png");
+}

@@ -31,3 +31,10 @@ table, th, td {
   color: red;
   text-decoration: none;
 }
+body{
+  background:url("/static/img/gal.png") ;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
