@@ -1,38 +1,38 @@
 from django.db import models
 
 # Create your models here.
-"""class City(models.Model):
-    name = models.CharField
+class City(models.Model):
+    name = models.CharField(null=True, max_length=100)
 
 class Place(models.Model):
-    name = models.CharField(max_length=50)
-    city = models.ForeignKey(City)
-    where = models.CharField
-    descrbtion = models.CharField(max_length=100)
-    info = models.CharField
-    kind = models.CharField(max_length=30)
-    rate = models.IntegerField
-    Images = models.ImageField
+    name = models.CharField(max_length=50,null=True)
+    city = models.ForeignKey(City, null=True, on_delete=models.CASCADE)
+    where = models.CharField(null=True, max_length=100)
+    descrbtion = models.CharField(max_length=100,null=True)
+    info = models.CharField(null=True, max_length=100)
+    kind = models.CharField(max_length=30, null=True)
+    rate = models.IntegerField(null=True)
+    Images = models.ImageField(null=True)
 
 class User(models.Model):
-    name = models.CharField
-    email = models.EmailField
-    password= models.CharField
+    name = models.CharField(null=True, max_length=100)
+    email = models.EmailField(null=True)
+    password= models.CharField(null=True, max_length=100)
 
 class Comment(models.Model):
-    creator = models.ForeignKey(User)
-    title = models.CharField(max_length=25)
-    place = models.ForeignKey(Place)
-    givenRate = models.IntegerField
-    comment = models.CharField(max_length=250)
-    commrate = models.IntegerField
+    creator = models.ForeignKey(User, null=True, on_delete=models.CASCADE)
+    title = models.CharField(max_length=25,null=True)
+    place = models.ForeignKey(Place, null=True, on_delete=models.CASCADE)
+    givenRate = models.IntegerField(null=True)
+    comment = models.CharField(max_length=250, null=True)
+    commrate = models.IntegerField(null=True)
 
 class howToGo(models.Model):
-    creator = models.ForeignKey(User)
-    place = models.ForeignKey(Place)
-    wayOfTransport = models.CharField(max_length=10)
-    description = models.CharField
+    creator = models.ForeignKey(User, null=True, on_delete=models.CASCADE)
+    place = models.ForeignKey(Place, null=True, on_delete=models.CASCADE)
+    wayOfTransport = models.CharField(max_length=10, null=True)
+    description = models.CharField(null=True, max_length=100)
 
 class List(models.Model):
-    user = models.ForeignKey(User)
-    place = models.ForeignKey(Place)"""
+    user = models.ForeignKey(User, null=True, on_delete=models.CASCADE)
+    place = models.ForeignKey(Place, null=True, on_delete=models.CASCADE)
