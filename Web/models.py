@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 class City(models.Model):
@@ -14,12 +15,8 @@ class Place(models.Model):
     info = models.CharField(null=True, max_length=100)
     kind = models.CharField(max_length=30, null=True)
     rate = models.IntegerField(null=True)
+    rateCount = models.IntegerField(null=True)
     Images = models.ImageField(null=True)
-
-class User(models.Model):
-    name = models.CharField(null=True, max_length=100)
-    email = models.EmailField(null=True)
-    password= models.CharField(null=True, max_length=100)
 
 class Comment(models.Model):
     creator = models.ForeignKey(User, null=True, on_delete=models.CASCADE)
