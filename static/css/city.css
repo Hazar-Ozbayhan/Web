@@ -2,7 +2,7 @@
 #baslık{
   top: 150px;
   left: 150px;
-  font-size: 150%;
+  font-size: 200%;
   font-weight: bold;
   position: absolute;
   color: black;
@@ -10,37 +10,40 @@
 
 }
 .pl{
-  /* harf sınırlaması kullanılacak */
   top: 200px;
   left: 150px;
   position: absolute;
   right: 1000px;
   height: 2px;
-  width: 400px;
+  width: 1000px;
+  background-color: white;
+  padding-bottom:150px;
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
+  font-size: 20px;
+
 }
 #rate{
   top:130px;
   left:500px;
   position: absolute;
+  font-size: 30px;
+
 }
 .simg{
   top:180px;
-  left: 1500px;
+  left: 1300px;
   position: fixed;
-  width: 20%;
-  height: 20%;
-}
-.fimg{
-  top:180px;
-  left: 800px;
-  position: fixed;
-  width: 20%;
-  height: 20%;
+  width: 30%;
+  height: 30%;
+
 }
 body{
-  background:url("/static/img/galata.jfif") ;
+  background:url("/static/img/ist.jpg") ;
     -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+
 }

@@ -24,18 +24,18 @@
   left: 140px;
 }
 table, th, td {
-  border: 1px solid black;
+  border: 1px solid white;
   border-collapse: collapse;
 }
 .tab a{
-  color: red;
+  color: white;
   text-decoration: none;
 }
 .comtab{
-  left: 120px;
-  top: 130px;
+  left: 140px;
+  top: 235px;
   position: absolute;
-  border: 3px solid gray;
+  border: 3px solid white;
   width: 800px;
   height: 125px;
 }
@@ -66,11 +66,11 @@ table, th, td {
   left: 140px;
 }
 table, th, td {
-  border: 1px solid black;
+  border: 1px solid white;
   border-collapse: collapse;
 }
 .tab a{
-  color: red;
+  color: white;
   text-decoration: none;
 }
 .like{
@@ -83,7 +83,7 @@ table, th, td {
   outline: none;
 }
 .hile{
-  top: 195px;
+  top: 280px;
   left: 1005px;
   position: absolute;
 
@@ -94,7 +94,7 @@ table, th, td {
 }
 
 .hil2{
-  top: 195px;
+  top: 285px;
   left: 1060px;
   position: absolute;
 }
@@ -112,7 +112,7 @@ table, th, td {
   width: 5%;
 }
 body{
-  background:url("/static/img/comm.png") ;
+  background:url("/static/img/commss.jpg") ;
     -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

@@ -4,8 +4,9 @@
   top: 120px;
   left: 150px;
   position: absolute;
-  color: magenta;
+  color: black;
   background: none;
+  font-size: 40px;
 }
 .info{
   background: none;
@@ -13,9 +14,13 @@
   left: 150px;
   position: absolute;
   color: black;
+  background: white;
+  padding: 30px;
+  font-size: 20px;
+
 }
 html{
 }
 body{
-  background: url("/static/img/back.png");
+  background: url("/static/img/pamukkale.jpg");
 }
