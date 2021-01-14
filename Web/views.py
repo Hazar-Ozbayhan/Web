@@ -34,5 +34,5 @@ def signin(request):
 def signup(request):
     return render(request, 'Pages/Signup.html')
 
-def howtoGo(request):
+def howToGo(request):
     return render(request,'Pages/howtogo.html')
