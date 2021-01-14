@@ -3,12 +3,13 @@
   top: 230px;
   left: 150px;
   position: absolute;
-  color: blue;
+  color: black;
   text-decoration: none;
+  font-family: "Times New Roman";
+  font-size: 30px;
 
 }
 .pl{
-  /* harf sınırlaması kullanılacak */
   top: 200px;
   left: 150px;
   position: absolute;
@@ -29,8 +30,32 @@
   top: 230px;
   left: 1000px;
 }
+.comtab{
+  left: 140px;
+  top: 235px;
+  position: absolute;
+  border: 3px solid black;
+  width: 800px;
+  height: 150px;
+  font-size: 20px;
+}
+.comm {
+  overflow-y: scroll;
+  height: 50px;
+  color: black;
+}
 #del{
   position: absolute;
   top: 230px;
-  left: 1300px;
+  left: 1250px;
+}
+#how{
+  position: absolute;
+  top: 340px;
+  left: 1010px;
+}
+
+body{
+  background: url("/static/img/arkaplan.jpg");
+  background-size: cover;
 }

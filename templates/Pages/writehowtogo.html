@@ -1,0 +1,18 @@
+
+{% extends 'Pages/main.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static '/css/writehowtogo.css' %}">
+{% endblock %}
+{% block content %}
+      <div>
+  <form action="">
+    <label id="co" for="Comment"><b>Write how do you want to go.</b></label>
+    <textarea rows="4" cols="50" name="comment" form="usrform" id="com">
+Enter your comment here</textarea>
+
+<button type="button" name="button" id="savB">Save & Share</button>
+
+    </form>
+    </div>
+{% endblock %}

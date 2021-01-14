@@ -1,0 +1,22 @@
+
+#com{
+  left: 150px;
+  top: 170px;
+  position: absolute;
+}
+#co{
+  left: 150px;
+  top: 150px;
+  position: fixed;
+}
+#savB{
+  left: 450px;
+  top: 280px;
+  position: absolute;
+}
+
+#il{
+  position: absolute;
+  left: 600px;
+  top: 170px;
+}

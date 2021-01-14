@@ -13,3 +13,7 @@ input[type=text], input[type=password] {
   text-decoration: underline;
   font-weight: bold;
 }
+body{
+  background: url("/static/img/arkaplan.jpg");
+  background-size: cover;
+}
