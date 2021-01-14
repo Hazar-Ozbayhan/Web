@@ -30,6 +30,7 @@ table, th, td {
 .tab a{
   color: white;
   text-decoration: none;
+
 }
 .comtab{
   left: 140px;
@@ -37,7 +38,7 @@ table, th, td {
   position: absolute;
   border: 3px solid white;
   width: 800px;
-  height: 125px;
+  height: 150px;
 }
 .comtab1{
   left: 120px;
@@ -64,10 +65,12 @@ table, th, td {
   position: absolute;
   top: 100px;
   left: 140px;
+  width: 14%;
 }
 table, th, td {
   border: 1px solid white;
   border-collapse: collapse;
+
 }
 .tab a{
   color: white;

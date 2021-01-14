@@ -1,8 +1,9 @@
 
 #baslık{
-  top: 120px;
+  top: 150px;
   left: 150px;
   position: absolute;
+  font-family: "Times New Roman";
 }
 .info{
   top: 200px;
@@ -10,21 +11,21 @@
   right: 750px;
   border-bottom: 1000px;
   position:absolute;
-  background-color: white;
-  padding: 30px;
   font-size: 20px;
+  font-family: "Times New Roman";
 }
 .image{
   top:200px;
   width: 30%;
   height: 30%;
-  left: 1360px;
+  left: 1310px;
   position: absolute;
 }
 .table{
   position: absolute;
   top: 100px;
   left: 140px;
+  width: 14%;
 }
 table, th, td {
   border: 1px solid black;
@@ -35,12 +36,10 @@ table, th, td {
   text-decoration: none;
 }
 body{
-  background:url("/static/img/gal.png") ;
+  background:url("/static/img/arkaplan.jpg") ;
     -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+
 }

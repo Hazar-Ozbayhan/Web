@@ -1,0 +1,21 @@
+
+{% extends 'Pages/main.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static '/css/howtogo.css' %}">
+{% endblock %}
+ {% block content %}
+           <table class="table">
+  <tr class="tab">
+       <th><a href="{% url 'place' %}">Info</a></th>
+    <th><a href="#">How to go</a></th>
+    <th><a href="{% url 'comment' %}">Comments</a></th>
+  </tr>
+               
+
+<div class="comtab"><p style="float: left;color:white;">Name : Angelina</p><p style="float: right; color:white;">Rate :10/10</p><br><br><p><hr>
+<p class="comm">We came to the Tower by boat. That evening was a clear night sky and I had a feeling that whole Istanbul is twinkling. Atmosphere was magical and food was great. I really enjoyed it, and I'd definitely recommend it to everyone!
+</p></div>
+
+
+{% endblock %}
