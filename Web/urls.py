@@ -10,5 +10,6 @@ urlpatterns = [
     path('place/', views.place, name="place"),
     path('signin/', views.signin, name="si"),
     path('signup', views.signup, name="su"),
+    path('howtogo/',views.howToGo, name="howTo")
 
 ]
