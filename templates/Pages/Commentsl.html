@@ -1,0 +1,24 @@
+
+{% extends 'Pages/mainl.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static '/css/comments.css' %}">
+{% endblock %}
+ {% block content %}
+           <table class="table">
+  <tr class="tab">
+       <th><a href="{% url 'placel' %}">Info</a></th>
+    <th><a href="{% url 'howTol' %}">How to go</a></th>
+    <th><a href="{% url 'commentl' %}">Comments</a></th>
+  </tr>
+               <div class="hile"><img class="ll" src="{% static 'img/begen.png' %}"></div>
+<button class="like">Like</button>
+               <div class="hil2"><img class="dl" src="{% static 'img/begenme.png' %}"></div>
+               <button class="dis">Disli</button>
+
+<div class="comtab"><p style="float: left;color:white;">Name : Angelina</p><p style="float: right; color:white;">Rate :10/10</p><br><br><p><hr>
+<p class="comm">We came to the Tower by boat. That evening was a clear night sky and I had a feeling that whole Istanbul is twinkling. Atmosphere was magical and food was great. I really enjoyed it, and I'd definitely recommend it to everyone!
+</p></div>
+
+
+{% endblock %}

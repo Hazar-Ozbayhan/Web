@@ -8,28 +8,30 @@
     <title></title>
   </head>
   <body>
-    <form action="" style="border:1px solid #ccc">
+    <form method="post" action="" style="border:1px solid #ccc">
+        {% csrf_token %}
   <div class="container">
     <h1>Sign Up</h1>
     <p class="war">Please fill in this form to create an account.</p>
     <hr>
     <label for="email"><b>Email</b></label>
     <br>
-    <input type="text" placeholder="Enter Email" name="email" required>
+    {{ form.email }}
     <br>
-    <label for="name"><b>Name</b></label>
+    <label for="name"><b>Username</b></label>
     <br>
-    <input type="text" placeholder="Enter Your Name" name="psw" required>
+    {{ form.username }}
     <br>
     <label for="psw"><b>Password</b></label>
     <br>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    {{ form.password }}
     <br>
     <label>
       <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> I am not a robot
     </label>
     <br>
     <p>By creating an account, you agree to OUR conditions of use and privacy notice </p>
+      {{ forms.errors }}
     <div class="clearfix">
       <button type="submit" class="signupbtn">Sign Up</button>
     </div>
@@ -37,3 +39,5 @@
 </form>
   </body>
 </html>
+
+

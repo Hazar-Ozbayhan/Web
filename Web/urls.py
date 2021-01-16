@@ -11,4 +11,10 @@ urlpatterns = [
     path('signin/', views.signin, name="si"),
     path('signup', views.signup, name="su"),
     path('howtogo/', views.howToGo, name="howTo"),
+    path('logout/', views.logoutUser,name="logout"),
+    path('l', views.homel, name="homel"),
+    path('cityl/', views.cityl, name="cityl"),
+    path('commentsl/', views.commentsl, name="commentl"),
+    path('placel/', views.placel, name="placel"),
+    path('howtogol/', views.howToGol, name="howTol"),
 ]

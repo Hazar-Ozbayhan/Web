@@ -1,0 +1,15 @@
+{% extends 'Pages/mainl.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static '/css/city.css' %}">
+{% endblock %}
+{% block content %}
+      <a href="{% url 'placel' %}" id="baslık">KIZ KULESİ</a>
+      <h2 id="rate">Rate: 9/10</h2>
+      <p class="pl">As one of the wallpapers of Istanbul, the Maiden's Tower always finds its place in the enchanting photographs of the Bosphorus.
+          <br>This tower, known as Damalis and Leandros at the time, inspires those who want to have a romantic activity in the city as a symbol of love and elegance in Istanbul.
+          <br>This historical building, built on a small island off Salacak, is open to visitors every day of the week with the Maiden's Tower Kuledebar on the upper floor.
+</p>
+<img src="{% static 'img/kiz-kulesinin-hikayesi.jpg' %}" alt="pls fix this" class="simg">
+
+{% endblock %}

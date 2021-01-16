@@ -8,7 +8,8 @@
     <title></title>
   </head>
   <body>
-    <form action="" style="border:1px solid #ccc">
+    <form action="" method="POST" style="border:1px solid #ccc">
+        {% csrf_token %}
   <div class="container">
     <h1>Sign In</h1>
     <label for="email"><b>Email</b></label>
@@ -22,6 +23,12 @@
     <label>
       <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
     </label>
+      {% for message in messages %}
+        <p>{{ message }}</p>
+      {% endfor %}
+
+
+
     <div class="clearfix">
       <button type="submit" class="signupbtn">Sign In</button>
     </div>
