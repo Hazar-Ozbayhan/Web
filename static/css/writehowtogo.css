@@ -20,3 +20,11 @@
   left: 600px;
   top: 170px;
 }
+body{
+  background:url("/static/img/arkaplan.jpg") ;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}

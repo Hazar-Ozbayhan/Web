@@ -1,13 +1,11 @@
 
 #baslık{
-  top: 230px;
-  left: 150px;
+  top: 220px;
+  left: 400px;
   position: absolute;
   color: black;
-  text-decoration: none;
-  font-family: "Times New Roman";
-  font-size: 30px;
-
+  background: none;
+  font-size: 40px;
 }
 .pl{
   top: 200px;
@@ -25,25 +23,12 @@
   width: 20%;
   height: 20%;
 }
-#comm{
+#rate{
   position: absolute;
   top: 230px;
   left: 1000px;
 }
-.comtab{
-  left: 140px;
-  top: 235px;
-  position: absolute;
-  border: 3px solid black;
-  width: 800px;
-  height: 150px;
-  font-size: 20px;
-}
-.comm {
-  overflow-y: scroll;
-  height: 50px;
-  color: black;
-}
+
 #del{
   position: absolute;
   top: 230px;
@@ -51,8 +36,8 @@
 }
 #how{
   position: absolute;
-  top: 340px;
-  left: 1010px;
+  top: 230px;
+  left: 700px;
 }
 
 body{

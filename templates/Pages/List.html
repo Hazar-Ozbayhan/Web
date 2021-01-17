@@ -6,13 +6,12 @@
 {% endblock %}
 {% block content %}
       <a id="baslık" href="{% url 'place' %}"></a>
+    <h1 id="baslık"> Kız Kulesi </h1>
 
 
-<div class="comtab"><p style="float: left;color:black;">KIZ KULESİ</p><p style="float: right; color:black;">Rate :10/10</p><br><p><hr>
-<p class="comm">
-</p></div>
+
 
 <button type="button" class="button" id="del">Delete</button>
-    <a href="{% url 'mc' %}">rate and comment</a>
-    <a href="{% url 'howTol' %}">How To Go</a>
+<button type="button" class="button" id="rate">Rate and Comment</button>
+    <button type="button" class="button" id="how">Write How do you want to go</button>
 {% endblock %}
