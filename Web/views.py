@@ -21,11 +21,11 @@ def city(request):
 def comments(request):
     return render(request, 'Pages/Comments.html')
 
-@login_required(login_url='login')
+@login_required(login_url='si')
 def list(request):
     return render(request, 'Pages/List.html')
 
-@login_required(login_url='login')
+@login_required(login_url='si')
 def makecomm(request):
     return render(request, 'Pages/makecomm.html')
 
@@ -53,7 +53,7 @@ def signin(request):
 
 def logoutUser(request):
     logout(request)
-    return redirect('login')
+    return redirect('si')
 
 def signup(request):
     form = CreateUserForm()
@@ -69,22 +69,22 @@ def signup(request):
 def howToGo(request):
     return render(request,'Pages/howtogo.html')
 
-@login_required(login_url='login')
+@login_required(login_url='si')
 def homel(request):
     return render(request, 'Pages/Homel.html')
 
-@login_required(login_url='login')
+@login_required(login_url='si')
 def cityl(request):
     return render(request, 'Pages/Cityl.html')
 
-@login_required(login_url='login')
+@login_required(login_url='si')
 def commentsl(request):
     return render(request, 'Pages/Commentsl.html')
 
-@login_required(login_url='login')
+@login_required(login_url='si')
 def placel(request):
     return render(request, 'Pages/Placel.html')
 
-@login_required(login_url='login')
+@login_required(login_url='si')
 def howToGol(request):
     return render(request,'Pages/howtogol.html')
