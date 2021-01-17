@@ -38,13 +38,13 @@ def signin(request):
 
     if request.method == 'POST':
         username = request.POST.get('username')
-        password = request.POST.get('psw')
+        password = request.POST.get('password')
 
         user = authenticate(request, username=username, password=password)
 
         if user is not None:
             login(request, user)
-            return redirect('')
+            return redirect('homel')
 
         else:
             messages.info(request, 'Email or password is incorrect')
