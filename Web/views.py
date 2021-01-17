@@ -89,3 +89,6 @@ def placel(request):
 @login_required(login_url='si')
 def howToGol(request):
     return render(request,'Pages/howtogol.html')
+
+def whtg(request):
+    return render(request, 'Pages/writehowtogo.html')
