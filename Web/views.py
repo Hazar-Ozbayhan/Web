@@ -62,6 +62,7 @@ def signup(request):
         form = CreateUserForm(request.POST)
         if form.is_valid():
             form.save()
+            return redirect('si')
 
     context = {'form':form}
     return render(request, 'Pages/Signup.html', context)
