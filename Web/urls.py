@@ -17,5 +17,6 @@ urlpatterns = [
     path('commentsl/', views.commentsl, name="commentl"),
     path('placel/', views.placel, name="placel"),
     path('howtogol/', views.howToGol, name="howTol"),
-    path('whtg/', views.whtg, name = 'whtg')
+    path('whtg/', views.whtg, name = 'whtg'),
+    path('cPlace/', views.createPlace, name = 'createPlace'),
 ]

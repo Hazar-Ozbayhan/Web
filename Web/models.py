@@ -1,11 +1,14 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django_resized import ResizedImageField
 
 # Create your models here.
 class City(models.Model):
-    name = models.CharField(null=True, max_length=100)
-    shortDescription = models.CharField(null=True, max_length=100)
-    Images = models.ImageField(null=True)
+    name = models.CharField(max_length=50,null=True)
+
+class kind(models.Model):
+    name = models.CharField(max_length=20,null=True)
+
 
 class Place(models.Model):
     name = models.CharField(max_length=50,null=True)
@@ -13,10 +16,13 @@ class Place(models.Model):
     where = models.CharField(null=True, max_length=100)
     description = models.CharField(max_length=100,null=True)
     info = models.CharField(null=True, max_length=100)
-    kind = models.CharField(max_length=30, null=True)
-    rate = models.IntegerField(null=True)
-    rateCount = models.IntegerField(null=True)
-    Images = models.ImageField(null=True)
+    kind = models.ForeignKey(kind, null=True, on_delete=models.CASCADE)
+    rate = models.IntegerField(null=True,default=0)
+    rateCount = models.IntegerField(null=True,default=0)
+    Images = ResizedImageField(size=[500, 300], blank=True, null=True)
+    canSee = models.BooleanField(null=True, default=False)
+    creator = models.ForeignKey(User, null=True, on_delete=models.CASCADE)
+
 
 class Comment(models.Model):
     creator = models.ForeignKey(User, null=True, on_delete=models.CASCADE)
@@ -24,12 +30,13 @@ class Comment(models.Model):
     place = models.ForeignKey(Place, null=True, on_delete=models.CASCADE)
     givenRate = models.IntegerField(null=True)
     comment = models.CharField(max_length=250, null=True)
-    commrate = models.IntegerField(null=True)
+    commrate = models.IntegerField(null=True, default=0)
+    canSee = models.BooleanField(null=True, default=False)
 
 class howToGo(models.Model):
     creator = models.ForeignKey(User, null=True, on_delete=models.CASCADE)
     place = models.ForeignKey(Place, null=True, on_delete=models.CASCADE)
-    wayOfTransport = models.CharField(max_length=10, null=True)
+    wayOfTransport = ('BUS','Subway','Seaway','Car')
     description = models.CharField(null=True, max_length=100)
 
 class List(models.Model):

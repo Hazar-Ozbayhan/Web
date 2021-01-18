@@ -1,0 +1,29 @@
+{% extends 'Pages/mainl.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static '/css/place.css' %}">
+{% endblock %}
+{% block content %}
+
+    <form action="" method="POST">
+    {% csrf_token %}
+        <h1>Name</h1>
+        {{ form.name }}
+        <h1>city</h1>
+        {{ form.city }}
+        <h1>where</h1>
+        {{ form.where }}
+        <h1>description</h1>
+        {{ form.description }}
+        <h1>info</h1>
+        {{ form.info }}
+        <h1>kind</h1>
+        {{ form.kind }}
+        <h1>Image</h1>
+        {{ form.Images }}
+
+
+    <input type="submit" name="submit">
+    </form>
+
+{% endblock %}

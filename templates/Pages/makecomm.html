@@ -1,15 +1,15 @@
 
-{% extends 'Pages/main.html' %}
+{% extends 'Pages/mainl.html' %}
 {% load static %}
 {% block css %}
 <link rel="stylesheet" href="{% static '/css/makecomm.css' %}">
 {% endblock %}
 {% block content %}
       <div>
-  <form action="">
+  <form action="" method="POST">
+      {% csrf_token %}
     <label id="co" for="Comment"><b>Comment</b></label>
-    <textarea rows="4" cols="50" name="comment" form="usrform" id="com">
-Enter your comment here</textarea>
+      {{ form.comment }}
 <label for="rates" id="il">Choose rate:</label>
   <select name="rates" id="rate">
     <option value="1">1</option>
@@ -23,7 +23,7 @@ Enter your comment here</textarea>
     <option value="9">9</option>
     <option value="10">10</option>
   </select>
-<button type="button" name="button" id="savB">Save & Share</button>
+<button type="submit" name="button" id="savB">Save & Share</button>
 
     </form>
     </div>
