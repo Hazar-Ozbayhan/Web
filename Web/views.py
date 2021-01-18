@@ -1,18 +1,37 @@
-from django.shortcuts import render, redirect
-from django.http import HttpResponse
+from django.shortcuts import render, redirect , get_object_or_404
+from django.http import HttpResponse, HttpResponseRedirect
 from .models import *
 from django.contrib.auth.forms import UserCreationForm
 from .forms import *
-
+from django.views.generic import ListView, DetailView
 from django.contrib.auth import authenticate, login , logout
 from django.contrib.auth.decorators import login_required
-
+from .models import Place
 from .forms import CreateUserForm
 from django.contrib import messages
+from django.urls import reverse
 
 
 def home(request):
     return render(request, 'Pages/Home.html')
+
+class Istanbul(ListView):
+    model = Place
+
+
+
+    template_name = 'Pages/City.html'
+
+
+
+class PPlace(DetailView):
+    model = Place
+    peke = Place
+
+    template_name = 'Pages/Place.html'
+
+
+
 
 
 def city(request):
@@ -37,7 +56,10 @@ def makecomm(request):
         form.givenRate='rates'
         form.place=Place
         if form.is_valid():
+            Place.rate=Place.rate * Place.rateCount
+            Place.rate=Place.rate+form.givenRate
             Place.rateCount= Place.rateCount+1
+            Place.rate/=Place.rateCount
             form.save()
             return redirect('homel')
 

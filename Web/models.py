@@ -6,8 +6,13 @@ from django_resized import ResizedImageField
 class City(models.Model):
     name = models.CharField(max_length=50,null=True)
 
+    def __str__(self):
+        return self.name
+
 class kind(models.Model):
     name = models.CharField(max_length=20,null=True)
+    def __str__(self):
+        return self.name
 
 
 class Place(models.Model):
@@ -22,6 +27,8 @@ class Place(models.Model):
     Images = ResizedImageField(size=[500, 300], blank=True, null=True)
     canSee = models.BooleanField(null=True, default=False)
     creator = models.ForeignKey(User, null=True, on_delete=models.CASCADE)
+    def __str__(self):
+        return self.name
 
 
 class Comment(models.Model):
