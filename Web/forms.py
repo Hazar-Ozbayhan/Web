@@ -18,3 +18,8 @@ class CommentForm(ModelForm):
     class Meta:
         model = Comment
         fields= ['place','givenRate','comment']
+
+class ListForm(ModelForm):
+    class Meta:
+        model = List
+        fields=['user','place']

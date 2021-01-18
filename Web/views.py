@@ -67,6 +67,14 @@ def makecomm(request):
 
 
 def place(request):
+    form = ListForm()
+
+    if request.method == 'POST':
+        form=ListForm(request.POST)
+        form.user=User
+        if form.is_valid():
+            form.save()
+
     return render(request, 'Pages/Place.html')
 
 
@@ -80,7 +88,7 @@ def signin(request):
 
         if user is not None:
             login(request, user)
-            return redirect('homel')
+            return redirect('home')
 
         else:
             messages.info(request, 'Email or password is incorrect')
@@ -106,27 +114,23 @@ def signup(request):
 def howToGo(request):
     return render(request,'Pages/howtogo.html')
 
-@login_required(login_url='si')
-def homel(request):
-    return render(request, 'Pages/Homel.html')
+class Izmir(ListView):
+    model = Place
 
-@login_required(login_url='si')
-def cityl(request):
-    queryset = Place.objects.filter(City.name=='Istanbul')
-    print(queryset)
-    return render(request, 'Pages/Cityl.html')
 
-@login_required(login_url='si')
-def commentsl(request):
-    return render(request, 'Pages/Commentsl.html')
 
-@login_required(login_url='si')
-def placel(request):
-    return render(request, 'Pages/Placel.html')
+    template_name = 'Pages/Izmir.html'
 
-@login_required(login_url='si')
-def howToGol(request):
-    return render(request,'Pages/howtogol.html')
+class Ankara(ListView):
+    model = Place
+
+
+
+    template_name = 'Pages/Ankara.html'
+
+
+
+
 
 @login_required(login_url='si')
 def whtg(request):

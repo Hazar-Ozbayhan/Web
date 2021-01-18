@@ -1,0 +1,23 @@
+
+{% extends 'Pages/main.html' %}
+
+
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static '/css/city.css' %}">
+{% endblock %}
+{% block content %}
+
+
+    {% for Place in object_list %}
+        {% if Place.city.pk ==  3 %}
+            <li>
+            <a href="{% url 'PPlaces' Place.pk %}">{{ Place.name }}</a>
+            {{ Place.description }}
+            {{ Place.rate }}
+            {{ Place.city }}</li>
+        {% endif %}
+    {% endfor %}
+
+
+{% endblock %}
