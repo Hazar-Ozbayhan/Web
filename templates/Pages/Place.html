@@ -12,8 +12,19 @@
     <h1>Descrip</h1>
     {{ object.description }}
 
+    <h1>Comments</h1>
+    {% for x in object_list %}
+    {% if object == x.place %}
+        {{ x.comment }} - {{ x.rate }}
+        {% endif %}
+    {% endfor %}
+
     {% if user.is_authenticated %}
-    <button type="button" name="button" id="addl">Add to the list</button>
+        <form method="post">
+        {% csrf_token %}
+
+
+    <button type="button" name="button" id="addl">Add to the list</button></form>
     {% endif %}
 
 {% endblock %}

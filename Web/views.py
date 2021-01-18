@@ -24,9 +24,18 @@ class Istanbul(ListView):
 
 
 
-class PPlace(DetailView):
-    model = Place
+class PPlace(DetailView):# Uyarı ellemeyin bozulmaya meyillidir
+    model = Place,Comment
     peke = Place
+    form = ListForm()
+
+    def post(self,request,*args,**kwargs):#add a place to list
+        if request.method == 'POST':
+            form = ListForm(request.POST)
+            form.place = object
+            form.user = User
+            if form.is_valid():
+                form.save()
 
     template_name = 'Pages/Place.html'
 
@@ -49,7 +58,7 @@ def list(request):
 @login_required(login_url='si')
 def makecomm(request):
 
-    form = CommentForm()
+    form = CommentForm()#comment yapma
     if request.method == 'POST':
         form =CommentForm(request.POST)
         form.creator=User
@@ -71,6 +80,7 @@ def place(request):
 
     if request.method == 'POST':
         form=ListForm(request.POST)
+        form.place=object
         form.user=User
         if form.is_valid():
             form.save()
@@ -80,7 +90,7 @@ def place(request):
 
 def signin(request):
 
-    if request.method == 'POST':
+    if request.method == 'POST':# adı üstünde
         username = request.POST.get('username')
         password = request.POST.get('password')
 
@@ -95,11 +105,11 @@ def signin(request):
 
     return render(request, 'Pages/Signin.html')
 
-def logoutUser(request):
+def logoutUser(request):# adı üstünde
     logout(request)
     return redirect('si')
 
-def signup(request):
+def signup(request):# adı üstünde
     form = CreateUserForm()
 
     if request.method == 'POST':
@@ -139,13 +149,13 @@ def whtg(request):
 @login_required(login_url='si')
 def createPlace(request):
 
-    form = PlaceForm()
+    form = PlaceForm()#place oluşturma
     if request.method == 'POST':
         form = PlaceForm(request.POST)
         form.creator=User
         if form.is_valid():
             form.save()
-            return  redirect('homel')
+            return  redirect('home')
 
     context={'form':form}
     return render(request,'Pages/create.html', context)
