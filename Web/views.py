@@ -144,6 +144,16 @@ class Ankara(ListView):
 
 @login_required(login_url='si')
 def whtg(request):
+    form = howtoForm()
+
+    if request.method == 'POST':
+        form =howtoForm(request.POST)
+        form.creator=User
+        if form.is_valid():
+            form.save()
+            return redirect('list')
+
+
     return render(request, 'Pages/writehowtogo.html')
 
 @login_required(login_url='si')
@@ -159,3 +169,7 @@ def createPlace(request):
 
     context={'form':form}
     return render(request,'Pages/create.html', context)
+
+def like(request,pk):
+    place= get_object_or_404(Place,pk=request.POST.get('llike'))
+

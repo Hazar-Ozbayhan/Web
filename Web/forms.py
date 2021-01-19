@@ -23,3 +23,8 @@ class ListForm(ModelForm):
     class Meta:
         model = List
         fields=['user','place']
+
+class howtoForm(ModelForm):
+    class Meta:
+        model = howToGo
+        fields=['creator','place','wayOfTransport','description']

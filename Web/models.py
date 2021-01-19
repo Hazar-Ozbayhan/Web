@@ -15,6 +15,12 @@ class kind(models.Model):
         return self.name
 
 
+class wayOfTransport(models.Model):
+    name = models.CharField(max_length=15,null=True)
+    def __str__(self):
+        return self.name
+
+
 class Place(models.Model):
     name = models.CharField(max_length=50,null=True)
     city = models.ForeignKey(City, null=True, on_delete=models.CASCADE)
@@ -37,13 +43,13 @@ class Comment(models.Model):
     place = models.ForeignKey(Place, null=True, on_delete=models.CASCADE)
     givenRate = models.IntegerField(null=True)
     comment = models.CharField(max_length=250, null=True)
-    commrate = models.IntegerField(null=True, default=0)
+    commrate = models.ManyToManyField(User,related_name='likes')
     canSee = models.BooleanField(null=True, default=False)
 
 class howToGo(models.Model):
     creator = models.ForeignKey(User, null=True, on_delete=models.CASCADE)
     place = models.ForeignKey(Place, null=True, on_delete=models.CASCADE)
-    wayOfTransport = ('BUS','Subway','Seaway','Car')
+    wayOfTransport = models.ForeignKey(wayOfTransport, null=True, on_delete=models.CASCADE)
     description = models.CharField(null=True, max_length=100)
 
 class List(models.Model):

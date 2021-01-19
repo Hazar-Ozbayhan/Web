@@ -13,7 +13,8 @@
   </tr>
                {% if user.is_authenticated %}
                <div class="hile"><img class="ll" src="{% static 'img/begen.png' %}"></div>
-<button class="like">Like</button>
+                   <form method="post" action="{% url 'like' object.pk %}">
+<button class="like" name="llike" type="submit" value="{{ object.pk }}">Like</button></form>
                <div class="hil2"><img class="dl" src="{% static 'img/begenme.png' %}"></div>
                <button class="dis">Disli</button>
                {% endif %}

@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from .views import Istanbul, PPlace,Ankara,Izmir
+from .views import Istanbul, PPlace,Ankara,Izmir,like
 
 urlpatterns = [
     path('', views.home, name="home"),
@@ -19,4 +19,5 @@ urlpatterns = [
     path('PPlace/<int:pk>', PPlace.as_view(),name='PPlaces'),
     path('Izmir/', Izmir.as_view(),name='Izmir'),
     path('Ankara/', Ankara.as_view(),name='Ankara'),
+    path('like/<int:pk>', like, name='like')
 ]
